@@ -25,3 +25,4 @@ Route::get('/mostrar/{id}', [App\Http\Controllers\UsuarioController::class ,'sho
 Route::post('/actualizarUsers/{id}', [App\Http\Controllers\UsuarioController::class ,'update']);
 Route::get('/usuariostipos', [App\Http\Controllers\VehiculoController::class ,'tipousuario']);
 Route::post('/registrovehiculo', [App\Http\Controllers\VehiculoController::class ,'store']);
+Route::get('/showvehiculos/{id}', [App\Http\Controllers\VehiculoController::class ,'show']);

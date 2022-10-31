@@ -3,7 +3,7 @@ import {HttpClient,HttpHeaders} from '@angular/common/http';
 import { UsuariosVehiculos} from '../interfaces/usuariosvehiculos';
 import { environment } from 'src/environments/environment';
 import { TipoUsuarios } from '../interfaces/tipousuarios';
-
+import {Vehiculos} from '../interfaces/vehiculos'
  
 @Injectable({
   providedIn: 'root'
@@ -34,6 +34,10 @@ registrovehiculo(params:any){
  return this.htppClient.post<any>(environment.Api+'registrovehiculo',params);
 }
 
+showvehiculo(id:any){
+
+ return this.htppClient.get<any>(environment.Api+'/showvehiculos/'+id);
+}
 
 }
 
