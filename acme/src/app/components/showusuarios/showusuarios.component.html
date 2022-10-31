@@ -1,0 +1,57 @@
+<div  class="container">
+   <form class="needs-validation" novalidate (ngSubmit)="actualizarEditForm()"   [formGroup]="editform">
+   <div class="form-group">
+      <label for="numerodecedula"> numero de cedula</label>
+      <input type="text" class="form-control" name="numerodecedula" formControlName='numerodecedula' >  
+   </div>
+ <div class="invalid-feedback">
+          El Campo numero de cedula es obligatorio
+      </div>
+   <div class="form-group">
+      <label for="numerodecedula"> primernombre</label>
+      <input type="text" class="form-control" name="primernombre" placeholder="porfavor digite su primernombre" required formControlName='primernombre' >  
+      <div class="invalid-feedback">
+         El Campo  primer nombre es obligatorio
+      </div>
+   </div>
+   <div class="form-group">
+      <label for="numerodecedula"> segundonombre</label>
+      <input type="text" class="form-control" name="segundonombre" placeholder="porfavor digite su  segundonombre" required formControlName='segundonombre' >  
+      <div class="invalid-feedback">
+         El Campo  segundonombre es obligatorio
+      </div>
+   </div>
+   <div class="form-group">
+      <label for="numerodecedula"> apellidos</label>
+      <input type="text" class="form-control" name="apellidos" placeholder="porfavor digite sus  apellidos" required formControlName='apellidos' >  
+      <div class="invalid-feedback">
+         El Campo  apellidos es obligatorio
+      </div>
+   </div>
+   <div class="form-group">
+      <label for="numerodecedula"> telefono</label>
+      <input type="text" class="form-control" name="telefono" placeholder="porfavor digite su  telefono" required formControlName='telefono' >  
+      <div class="invalid-feedback">
+         El Campo   telefono es obligatorio
+      </div>
+   </div>
+   <div class="form-group">
+      <label for="numerodecedula"> ciudad</label>
+      <input type="text" class="form-control" name="ciudad" placeholder="porfavor digite su ciudad" required formControlName='ciudad' >  
+      <div class="invalid-feedback">
+         El Campo ciudad es obligatorio
+      </div>
+   </div>
+   <div class="form-group">
+      <label for="tipousuario">Selecione el tipo usuario</label>
+      <select class="form-control" name="tipousuario" required required formControlName='tipousuario' >
+         <option value="1">conductor </option>
+         <option value="2">propietario </option>
+      </select>
+      <div class="invalid-feedback">
+         El Campo tipo usuario es obligatorio
+      </div>
+   </div>
+   <button type="submit"class="btn btn-success">enviar</button>
+   </form>      
+</div>
