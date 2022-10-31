@@ -1,0 +1,2 @@
+CREATE view  vw_vehiculosusarios as
+SELECT CONCAT_WS(U.primernombre,' ',U.apellidos) as conductor, CONCAT_WS(C.primernombre,'',C.apellidos) as propietario, v.idvehiculos,v.placa, v.color,v.marca, tv.tipovehiculo from usuario U INNER join vehiculos v on U.idusuario= v.idusuariovehiculo LEFT join tipousuario tp on tp.idtipousuario=1 LEFT join usuario C on C.tipousuario= 2 LEFT join tipovehiculo tv on tv.idtipovehiculo=v.tipodevehiculo
