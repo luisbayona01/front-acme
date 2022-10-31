@@ -1,1 +1,63 @@
-<p>showvehiculos works!</p>
+<div class="container">	
+<form  class="needs-validation" novalidate (ngSubmit)="actualizarEditForm()"  [formGroup]="editform">
+					<div class="form-group">
+						<label for="placa"> placa</label>
+						<input type="text" class="form-control" name="placa"  required formControlName='placa'>
+						<div class="invalid-feedback">
+							El Campo numero de placa es obligatorio
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="color"> color</label>
+						<input type="text" class="form-control" name="color"  required  formControlName='color'>
+						<div class="invalid-feedback">
+							El Campo color es obligatorio
+						</div>
+
+					</div>
+
+
+<div class="form-group">
+						<label for="color"> marca</label>
+						<input type="text" class="form-control" name="marca"  required  formControlName='marca'>
+						<div class="invalid-feedback">
+							El Campo color es obligatorio
+						</div>
+
+					</div>
+		
+    <div class="form-group">
+						<label for="">Selecione el tipo vehiculo</label>
+						<select class="form-control" name="tipodevehiculo" required formControlName='tipodevehiculo'>
+<option value="1">Particular </option>
+<option value="2">publico </option>
+  </select>
+
+
+						<div class="invalid-feedback">
+							El Campo tipo vehiculo es obligatorio
+						</div>
+					</div>
+
+					
+
+					<div class="form-group">
+						<label for="">Selecione el usuario</label>
+						<select class="form-control" name="idusuariovehiculo" required formControlName='idusuariovehiculo'>
+<option value="">seleccione un conductor/propietario  </option>
+<<option *ngFor="let tipo  of tipoUsuarios" [value]="tipo.idusuario">{{tipo.nombre}} {{tipo.apellidos}} {{tipo.tipousuario }} </option>
+  </select>
+
+
+						<div class="invalid-feedback">
+							El Campo  usuario es obligatorio
+						</div>
+					</div>
+
+<button type="submit"class="btn btn-success">enviar</button>
+				</form>
+
+
+
+			</div>

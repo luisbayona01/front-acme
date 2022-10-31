@@ -36,7 +36,14 @@ registrovehiculo(params:any){
 
 showvehiculo(id:any){
 
- return this.htppClient.get<any>(environment.Api+'/showvehiculos/'+id);
+ return this.htppClient.get<any>(environment.Api+'showvehiculos/'+id);
+}
+
+editvehiculo(params:Vehiculos,id:any){
+
+const url=environment.Api+'actualizarVehiculos/'+id;
+ console.log(url)
+ return this.htppClient.post<Vehiculos>(url, params);
 }
 
 }
